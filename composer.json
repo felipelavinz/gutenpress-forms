@@ -1,0 +1,13 @@
+{
+    "name": "gutenpress/forms",
+    "description": "Forms component for GutenPress",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Felipe Lavín Z.",
+            "email": "felipe@yukei.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
