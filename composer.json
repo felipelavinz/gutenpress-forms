@@ -8,6 +8,17 @@
             "email": "felipe@yukei.net"
         }
     ],
+    "autoload": {
+        "classmap": ["src/"]
+    },
     "minimum-stability": "dev",
-    "require": {}
+    "repositories" : [
+        {
+            "type" : "vcs",
+            "url"  : "https://gitlab.com/GutenPress/helpers.git"
+        }
+    ],
+    "require": {
+        "gutenpress/helpers" : "@dev"
+    }
 }
