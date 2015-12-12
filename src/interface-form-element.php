@@ -9,7 +9,7 @@
  */
 namespace GutenPress\Forms;
 
-interface Form_Element_Interface{
+interface Form_Element_Interface extends Element_Interface{
 
 	/**
 	 * Set the label for the form control.
