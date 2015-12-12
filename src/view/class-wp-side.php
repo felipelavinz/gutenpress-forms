@@ -30,7 +30,7 @@ class WP_Side extends Forms\Form_View{
 							$out .= (string)$element;
 							$out .= $this->get_element_description( $element );
 						$out .= '</p>';
-					$out .= '</div';
+					$out .= '</div>';
 				}
 			}
 		$out .= '</div>';
