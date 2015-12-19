@@ -1,0 +1,24 @@
+{
+  "name": "gutenpress/forms",
+  "authors": [
+    "Felipe Lavín Z. <felipe@yukei.net>"
+  ],
+  "description": "Forms component for GutenPres",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "WordPress",
+    "GutenPress",
+    "forms"
+  ],
+  "license": "GPL-3.0",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
