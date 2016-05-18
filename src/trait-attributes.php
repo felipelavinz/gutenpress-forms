@@ -126,7 +126,7 @@ trait Attributes_Trait{
 			if ( ! is_string( $val ) ) {
 				$val = json_encode( $val );
 			}
-			$out  .= ' '. $key .'="'. esc_attr( $val ) .'"';
+			$out  .= ' '. $key .'="'. esc_attr( trim($val) ) .'"';
 		}
 		return $out;
 	}
