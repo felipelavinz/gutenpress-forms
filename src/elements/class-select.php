@@ -47,7 +47,7 @@ class Select extends Forms\HTML_Form_Element implements Forms\Option_Element_Int
 		}
 		foreach ( $options as $key => &$val ) {
 			if ( is_array( $val ) && ! Arrays::is_assoc( $val ) ) {
-				$val = $this->maybe_deep_options( $val );
+				$val = array_combine( $val, $val );
 			}
 		}
 		return $options;

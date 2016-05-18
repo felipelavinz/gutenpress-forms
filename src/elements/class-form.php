@@ -29,6 +29,7 @@ class Form extends Forms\HTML_Element{
 			throw new \InvalidArgumentException();
 		}
 		$this->view = $view_class;
+		return $this;
 	}
 	public function get_view(){
 		if ( empty( $this->view ) ) {
@@ -39,7 +40,8 @@ class Form extends Forms\HTML_Element{
 	}
 	public function __toString(){
 		$out  = '';
-		$view = new $this->{ $this->get_view() }( $this );
+		$__v  = $this->get_view();
+		$view = new $__v( $this );
 		$out .= '<form'. $this->render_attributes() .'>';
 			$out .= $view;
 		$out .= '</form>';

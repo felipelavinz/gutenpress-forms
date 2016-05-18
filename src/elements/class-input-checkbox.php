@@ -12,18 +12,19 @@ class Input_Checkbox extends Input implements Forms\Option_Element_Interface{
 		if ( ! Arrays::is_assoc( $options ) ) {
 			$options = array_combine( $options, $options );
 		}
-		$out .= '<div'. $this->render_attributes() .'>';
+		$out  = '<div'. $this->render_attributes() .'>';
 			$out .= '<ul>';
-			$i= 0; foreach ( $options as $value => $label ) {
+			foreach ( $options as $value => $label ) {
 				$out .= $this->render_element( $value, $label );
-			++$i; }
+			}
 			$out .= '</ul>';
 		$out .= '</div>';
 		return $out;
 	}
 	public function render_element( $value, $label ){
+		static $i = 1;
 		$name    = count( $this->get_options() ) > 1 ? $this->get_name() .'[]' : $this->get_name();
-		$checked = in_array( $value, $this->get_value() ) ? ' checked="checked"' : '';
+		$checked = in_array( $value, (array) $this->get_value() ) ? ' checked="checked"' : '';
 		$out  = '';
 		$out .= '<li>';
 			$out .= '<label>';
@@ -31,6 +32,7 @@ class Input_Checkbox extends Input implements Forms\Option_Element_Interface{
 				$out .= $label;
 			$out .= '</label>';
 		$out .= '</li>';
+		++$i;
 		return $out;
 	}
 }
