@@ -1,5 +1,6 @@
 {
     "name": "gutenpress/forms",
+    "type": "wordpress-plugin",
     "description": "Forms component for GutenPress",
     "license": "GPL-3.0",
     "authors": [
